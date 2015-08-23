@@ -1,17 +1,18 @@
+# board.rb
 class Board
   attr_accessor :grid
 
   def initialize
     self.grid = []
 
-    for grid_i in 0..8
-      self.grid[grid_i] = ' '
+    (0..8).each do |grid_i|
+      grid[grid_i] = ' '
     end
   end
 
-  def set(grid_i,char)
-    if self.grid[grid_i] == ' '
-      self.grid[grid_i] = char
+  def set(grid_i, char)
+    if grid[grid_i] == ' '
+      grid[grid_i] = char
       return true
     else
       return false
@@ -25,8 +26,8 @@ class Board
   end
 
   def print
-    p "#{self.grid[0]}|#{self.grid[1]}|#{self.grid[2]}"
-    p "#{self.grid[3]}|#{self.grid[4]}|#{self.grid[5]}"
-    p "#{self.grid[6]}|#{self.grid[7]}|#{self.grid[8]}"
+    p "#{grid[0]}|#{grid[1]}|#{grid[2]}"
+    p "#{grid[3]}|#{grid[4]}|#{grid[5]}"
+    p "#{grid[6]}|#{grid[7]}|#{grid[8]}"
   end
 end

@@ -1,5 +1,6 @@
 #!/usr/bin/ruby
 
+# player.rb
 class Player
   attr_accessor :name
 
